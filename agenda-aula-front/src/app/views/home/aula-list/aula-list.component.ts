@@ -13,6 +13,7 @@ export class AulaListComponent implements OnInit {
       sala: '10',
       nome: 'Felipe Ghidini',
       aula: 'Desenvolvimento Web',
+      data: '10/10/2021',
       inicioAula: '10:30',
       fimAula: '12:00'
     },
@@ -20,6 +21,7 @@ export class AulaListComponent implements OnInit {
       sala: '18',
       nome: 'Felipe Ghidini',
       aula: 'Desenvolvimento Web',
+      data: '10/10/2021',
       inicioAula: '10:30',
       fimAula: '12:00'
     },
@@ -27,6 +29,7 @@ export class AulaListComponent implements OnInit {
       sala: '11',
       nome: 'Felipe Ghidini',
       aula: 'Desenvolvimento Web',
+      data: '10/10/2021',
       inicioAula: '10:30',
       fimAula: '12:00'
     },
@@ -34,6 +37,7 @@ export class AulaListComponent implements OnInit {
       sala: '1',
       nome: 'Felipe Ghidini',
       aula: 'Desenvolvimento Web',
+      data: '10/10/2021',
       inicioAula: '10:30',
       fimAula: '12:00'
     },
@@ -41,12 +45,13 @@ export class AulaListComponent implements OnInit {
       sala: '12',
       nome: 'Felipe Ghidini',
       aula: 'Desenvolvimento Web',
+      data: '10/10/2021',
       inicioAula: '10:30',
       fimAula: '12:00'
     }
   ];
 
-  displayedColumns = ['sala','nome', 'aula', 'inicioAula', 'fimAula'];
+  displayedColumns = ['sala','nome', 'aula', 'data', 'inicioAula', 'fimAula'];
 
   constructor() { }
 

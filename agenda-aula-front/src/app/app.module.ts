@@ -7,6 +7,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
@@ -26,7 +28,8 @@ import { AulaListComponent } from './views/home/aula-list/aula-list.component';
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
