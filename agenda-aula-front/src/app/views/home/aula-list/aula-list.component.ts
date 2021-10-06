@@ -10,7 +10,35 @@ export class AulaListComponent implements OnInit {
 
   aulas: Aula[] = [
     {
-      Nº: 1,
+      sala: '10',
+      nome: 'Felipe Ghidini',
+      aula: 'Desenvolvimento Web',
+      inicioAula: '10:30',
+      fimAula: '12:00'
+    },
+    {
+      sala: '18',
+      nome: 'Felipe Ghidini',
+      aula: 'Desenvolvimento Web',
+      inicioAula: '10:30',
+      fimAula: '12:00'
+    },
+    {
+      sala: '11',
+      nome: 'Felipe Ghidini',
+      aula: 'Desenvolvimento Web',
+      inicioAula: '10:30',
+      fimAula: '12:00'
+    },
+    {
+      sala: '1',
+      nome: 'Felipe Ghidini',
+      aula: 'Desenvolvimento Web',
+      inicioAula: '10:30',
+      fimAula: '12:00'
+    },
+    {
+      sala: '12',
       nome: 'Felipe Ghidini',
       aula: 'Desenvolvimento Web',
       inicioAula: '10:30',
@@ -18,7 +46,7 @@ export class AulaListComponent implements OnInit {
     }
   ];
 
-  displayedColumns = ['nome', 'aula', 'inicioAula', 'fimAula'];
+  displayedColumns = ['sala','nome', 'aula', 'inicioAula', 'fimAula'];
 
   constructor() { }
 

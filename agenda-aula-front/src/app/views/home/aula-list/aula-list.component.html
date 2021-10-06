@@ -1,6 +1,10 @@
 <table mat-table [dataSource]="aulas" class="mat-elevation-z8">
 
-  <!-- Position Column -->
+  <ng-container matColumnDef="sala">
+    <th mat-header-cell *matHeaderCellDef> Nº Sala </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.sala }} </td>
+  </ng-container>
+
   <ng-container matColumnDef="nome">
     <th mat-header-cell *matHeaderCellDef> Nome </th>
     <td mat-cell *matCellDef="let aula"> {{ aula.nome }} </td>

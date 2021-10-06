@@ -1,7 +1,5 @@
-import { Time } from "@angular/common";
-
 export interface Aula {
-  Nº: number;
+  sala: string;
   nome: string;
   aula: string;
   inicioAula: string;
