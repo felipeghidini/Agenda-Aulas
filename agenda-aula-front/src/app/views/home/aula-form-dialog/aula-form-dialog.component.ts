@@ -26,8 +26,14 @@ export class AulaFormDialogComponent implements OnInit {
     });
   }
 
+  createAula() {
+    this.dialogRef.close();
+    this.aulaForm.reset();
+  }
+
   cancel(): void {
     this.dialogRef.close();
+    this.aulaForm.reset();
   }
 
 }
