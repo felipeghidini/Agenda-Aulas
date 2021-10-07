@@ -8,17 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { AulaListComponent } from './views/home/aula-list/aula-list.component';
+import { AulaFormDialogComponent } from './views/home/aula-form-dialog/aula-form-dialog.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AulaListComponent
+    AulaListComponent,
+    AulaFormDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,13 @@ import { AulaListComponent } from './views/home/aula-list/aula-list.component';
     MatButtonModule,
     MatTabsModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
