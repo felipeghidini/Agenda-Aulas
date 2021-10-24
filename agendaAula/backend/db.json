@@ -1,40 +1,40 @@
 {
-  "aulas": [
-    {
-      "id": 1,
-      "sala": "10",
-      "nome": "Felipe Ghidini",
-      "aula": "Desenvolvimento Web",
-      "data": "10/10/2021",
-      "inicioAula": "10:30",
-      "fimAula": "12:00"
-    },
-    {
-      "id": 2,
-      "sala": "10",
-      "nome": "Felipe Ghidini",
-      "aula": "Desenvolvimento Web",
-      "data": "10/10/2021",
-      "inicioAula": "10:30",
-      "fimAula": "12:00"
-    },
-    {
-      "id": 3,
-      "sala": "10",
-      "nome": "Felipe Ghidini",
-      "aula": "Desenvolvimento Web",
-      "data": "10/10/2021",
-      "inicioAula": "10:30",
-      "fimAula": "12:00"
-    },
-    {
-      "sala": "11",
-      "nome": "Amanda Ghidini",
-      "aula": "Engenharia",
-      "data": "20/10/2021",
-      "inicioAula": "19:30",
-      "fimAula": "22:00",
-      "id": 4
-    }
-  ]
+    "aulas": [
+        {
+            "id": 1,
+            "sala": "10",
+            "nome": "Felipe Ghidini",
+            "aula": "Desenvolvimento Web",
+            "data": "10/10/2021",
+            "inicioAula": "10:30",
+            "fimAula": "12:00"
+        },
+        {
+            "id": 2,
+            "sala": "10",
+            "nome": "Felipe Ghidini",
+            "aula": "Desenvolvimento Web",
+            "data": "10/10/2021",
+            "inicioAula": "10:30",
+            "fimAula": "12:00"
+        },
+        {
+            "id": 3,
+            "sala": "10",
+            "nome": "Felipe Ghidini",
+            "aula": "Desenvolvimento Web",
+            "data": "10/10/2021",
+            "inicioAula": "10:30",
+            "fimAula": "12:00"
+        },
+        {
+            "sala": "11",
+            "nome": "Amanda Ghidini",
+            "aula": "Engenharia",
+            "data": "20/10/2021",
+            "inicioAula": "19:30",
+            "fimAula": "22:00",
+            "id": 4
+        }
+    ]
 }

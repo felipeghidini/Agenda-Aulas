@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { AulaService } from 'src/app/shared/service/aula.service';
 
 @Component({
   selector: 'app-aula-form-dialog',
@@ -12,7 +13,8 @@ export class AulaFormDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<AulaFormDialogComponent>,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private aulaService: AulaService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class AulaFormDialogComponent implements OnInit {
   createAula() {
     //let newDate: moment.Moment = moment.utc(this.aulaForm.value.data).local();
     //this.aulaForm.value.data = newDate.format("YYYY-MM-DD");
+    this.aulaService.showMessage('Jesus Cavaleiro do CÉU');
     this.dialogRef.close();
     this.aulaForm.reset();
   }

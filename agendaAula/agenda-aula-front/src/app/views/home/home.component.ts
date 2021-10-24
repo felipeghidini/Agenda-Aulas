@@ -10,7 +10,7 @@ import { AulaFormDialogComponent } from './aula-form-dialog/aula-form-dialog.com
 export class HomeComponent implements OnInit {
 
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
