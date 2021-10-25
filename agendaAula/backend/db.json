@@ -19,22 +19,13 @@
       "fimAula": "12:00"
     },
     {
-      "id": 3,
-      "sala": "10",
-      "nome": "Felipe Ghidini",
-      "aula": "Desenvolvimento Web",
-      "data": "10/10/2021",
-      "inicioAula": "10:30",
-      "fimAula": "12:00"
-    },
-    {
-      "sala": "11",
-      "nome": "Amanda Ghidini",
-      "aula": "Engenharia",
-      "data": "20/10/2021",
-      "inicioAula": "19:30",
-      "fimAula": "22:00",
-      "id": 4
+      "id": 4,
+      "sala": "12",
+      "nome": "Felipe Rodrigues Ghidini",
+      "aula": "Engenharia de Software",
+      "data": "2021-10-26T03:00:00.000Z",
+      "inicioAula": "19:00",
+      "fimAula": "22:30"
     }
   ]
 }

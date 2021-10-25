@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Editar Aula</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="aulaForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nº da Sala</mat-label>
+      <input matInput formControlName="sala" [(ngModel)]="aula.sala" name="sala">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Professor</mat-label>
+      <input matInput formControlName="nome" [(ngModel)]="aula.nome" name="nome">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Aula</mat-label>
+      <input matInput formControlName="aula" [(ngModel)]="aula.aula" name="aula">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Data</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="data" [(ngModel)]="aula.data" name="data">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Inicio da Aula</mat-label>
+      <input matInput type="time" formControlName="inicioAula" [(ngModel)]="aula.inicioAula" name="inicioAula">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Fim da Aula</mat-label>
+      <input type="time" matInput formControlName="fimAula" [(ngModel)]="aula.fimAula" name="fimAula">
+    </mat-form-field>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="updateAula()">Adicionar</button>
+  <button mat-button (click)="cancel()">Cancelar</button>
+</div>

@@ -11,50 +11,7 @@ export class AulaListComponent implements OnInit {
 
   aulas: Aula[];
 
-  // aulas: Aula[] = [
-  //   {
-  //     sala: '10',
-  //     nome: 'Felipe Ghidini',
-  //     aula: 'Desenvolvimento Web',
-  //     data: '10/10/2021',
-  //     inicioAula: '10:30',
-  //     fimAula: '12:00'
-  //   },
-  //   {
-  //     sala: '18',
-  //     nome: 'Felipe Ghidini',
-  //     aula: 'Desenvolvimento Web',
-  //     data: '10/10/2021',
-  //     inicioAula: '10:30',
-  //     fimAula: '12:00'
-  //   },
-  //   {
-  //     sala: '11',
-  //     nome: 'Felipe Ghidini',
-  //     aula: 'Desenvolvimento Web',
-  //     data: '10/10/2021',
-  //     inicioAula: '10:30',
-  //     fimAula: '12:00'
-  //   },
-  //   {
-  //     sala: '1',
-  //     nome: 'Felipe Ghidini',
-  //     aula: 'Desenvolvimento Web',
-  //     data: '10/10/2021',
-  //     inicioAula: '10:30',
-  //     fimAula: '12:00'
-  //   },
-  //   {
-  //     sala: '12',
-  //     nome: 'Felipe Ghidini',
-  //     aula: 'Desenvolvimento Web',
-  //     data: '10/10/2021',
-  //     inicioAula: '10:30',
-  //     fimAula: '12:00'
-  //   }
-  // ];
-
-  displayedColumns = ['sala','nome', 'aula', 'data', 'inicioAula', 'fimAula'];
+  displayedColumns = ['sala','nome', 'aula', 'data', 'inicioAula', 'fimAula', 'acoes'];
 
   constructor(private aulaService: AulaService) { }
 
@@ -62,9 +19,6 @@ export class AulaListComponent implements OnInit {
     this.aulaService.readAula().subscribe(aulas => {
       this.aulas = aulas
       console.log(aulas);
-
     })
   }
-
-
 }

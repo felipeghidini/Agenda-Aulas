@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Aula } from 'src/app/model/aula';
 import { AulaService } from 'src/app/shared/service/aula.service';
 
 @Component({
-  selector: 'app-aula-form-dialog',
-  templateUrl: './aula-form-dialog.component.html',
-  styleUrls: ['./aula-form-dialog.component.css']
+  selector: 'app-update-aula',
+  templateUrl: './update-aula.component.html',
+  styleUrls: ['./update-aula.component.css']
 })
-export class AulaFormDialogComponent implements OnInit {
+export class UpdateAulaComponent implements OnInit {
+
   public aulaForm: FormGroup;
 
   aula: Aula = {
@@ -23,9 +25,10 @@ export class AulaFormDialogComponent implements OnInit {
   }
 
   constructor(
-    public dialogRef: MatDialogRef<AulaFormDialogComponent>,
+    public dialogRef: MatDialogRef<UpdateAulaComponent>,
     private fb: FormBuilder,
-    private aulaService: AulaService
+    private aulaService: AulaService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +42,7 @@ export class AulaFormDialogComponent implements OnInit {
     });
   }
 
-  createAula(): any{
+  updateAula(): any{
     //let newDate: moment.Moment = moment.utc(this.aulaForm.value.data).local();
     //this.aulaForm.value.data = newDate.format("YYYY-MM-DD");
     this.aulaService.createAula(this.aula).subscribe(() => {
@@ -50,8 +53,12 @@ export class AulaFormDialogComponent implements OnInit {
   }
 
   cancel(): void {
+    this.router.navigate([''])
     this.dialogRef.close();
     this.aulaForm.reset();
   }
 
 }
+
+
+

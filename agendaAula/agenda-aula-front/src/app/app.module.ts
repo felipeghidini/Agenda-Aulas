@@ -21,13 +21,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateAulaComponent } from './views/home/update-aula/update-aula.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AulaListComponent,
-    AulaFormDialogComponent
+    AulaFormDialogComponent,
+    UpdateAulaComponent
   ],
   imports: [
     BrowserModule,

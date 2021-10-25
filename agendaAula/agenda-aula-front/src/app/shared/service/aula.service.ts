@@ -17,8 +17,8 @@ export class AulaService {
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
       duration: 4000,
-      horizontalPosition: "right",
-      verticalPosition: "top"
+      horizontalPosition: "left",
+      verticalPosition: "bottom"
     })
   }
 
@@ -28,6 +28,16 @@ export class AulaService {
 
   readAula(): Observable<Aula[]> {
     return this.http.get<Aula[]>(this.baseUrl);
+  }
+
+  readAulaById(id: string): Observable<Aula> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Aula>(url);
+  }
+
+  updateAula(aula: Aula): Observable<Aula> {
+    const url = `${this.baseUrl}/${aula.id}`;
+    return this.http.put<Aula>(url, aula)
   }
 
 }
