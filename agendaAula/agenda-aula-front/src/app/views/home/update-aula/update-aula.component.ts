@@ -45,7 +45,7 @@ export class UpdateAulaComponent implements OnInit {
   updateAula(): any{
     //let newDate: moment.Moment = moment.utc(this.aulaForm.value.data).local();
     //this.aulaForm.value.data = newDate.format("YYYY-MM-DD");
-    this.aulaService.createAula(this.aula).subscribe(() => {
+    this.aulaService.updateAula(this.aula).subscribe(() => {
       this.aulaService.showMessage('Jesus Cavaleiro do CÉU');
       this.dialogRef.close();
       this.aulaForm.reset();

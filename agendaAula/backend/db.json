@@ -26,6 +26,15 @@
       "data": "2021-10-26T03:00:00.000Z",
       "inicioAula": "19:00",
       "fimAula": "22:30"
+    },
+    {
+      "id": 5,
+      "sala": "d",
+      "nome": "dd",
+      "aula": "dsds",
+      "data": "2021-10-26T03:00:00.000Z",
+      "inicioAula": "",
+      "fimAula": "15:23"
     }
   ]
 }
