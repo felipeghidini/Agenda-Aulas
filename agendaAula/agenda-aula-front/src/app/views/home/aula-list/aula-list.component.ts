@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Aula } from 'src/app/model/aula';
 import { AulaService } from 'src/app/shared/service/aula.service';
-import { UpdateAulaComponent } from '../update-aula/update-aula.component';
+import { UpdateAulaComponent } from './update-aula/update-aula.component';
+import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
 
 @Component({
   selector: 'app-aula-list',
@@ -16,10 +17,10 @@ export class AulaListComponent implements OnInit {
   displayedColumns = ['sala','nome', 'aula', 'data', 'inicioAula', 'fimAula', 'acoes'];
 
   constructor(private aulaService: AulaService,
-    public dialog: MatDialog) { }
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.aulaService.readAula().subscribe(aulas => {
+    this.aulaService.listaAula().subscribe(aulas => {
       this.aulas = aulas
       console.log(aulas);
     })
@@ -33,6 +34,22 @@ export class AulaListComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  excluirAula(id: string) {
+    let dialogRef = this.dialog.open(ModalDeleteComponent, {
+      height: '150px',
+      width: '300px'
+    });
+    dialogRef.afterClosed().subscribe(estado => {
+      if(estado) {
+        this.aulaService.eliminar(id).subscribe(() => {
+          this.aulaService.listaAula().subscribe(data => {
+            this.aulas = data;
+          })
+        })
+      }
+    })
   }
 
 }

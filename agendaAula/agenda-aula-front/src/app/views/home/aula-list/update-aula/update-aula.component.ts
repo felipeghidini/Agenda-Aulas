@@ -12,7 +12,7 @@ import { AulaService } from 'src/app/shared/service/aula.service';
 })
 export class UpdateAulaComponent implements OnInit {
 
-  public aulaForm: FormGroup;
+  public aulaFormEdit: FormGroup;
 
   aula: Aula = {
     id: '',
@@ -32,7 +32,7 @@ export class UpdateAulaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.aulaForm = this.fb.group({
+    this.aulaFormEdit = this.fb.group({
       sala: ['', [Validators.required]],
       nome: ['', [Validators.required]],
       aula: ['', [Validators.required]],
@@ -48,14 +48,14 @@ export class UpdateAulaComponent implements OnInit {
     this.aulaService.updateAula(this.aula).subscribe(() => {
       this.aulaService.showMessage('Jesus Cavaleiro do CÉU');
       this.dialogRef.close();
-      this.aulaForm.reset();
+      this.aulaFormEdit.reset();
     })
   }
 
   cancel(): void {
     this.router.navigate([''])
     this.dialogRef.close();
-    this.aulaForm.reset();
+    this.aulaFormEdit.reset();
   }
 
 }

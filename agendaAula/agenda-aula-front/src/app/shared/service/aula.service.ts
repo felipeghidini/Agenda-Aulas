@@ -26,7 +26,7 @@ export class AulaService {
     return this.http.post<Aula>(this.baseUrl, aula);
   }
 
-  readAula(): Observable<Aula[]> {
+  listaAula(): Observable<Aula[]> {
     return this.http.get<Aula[]>(this.baseUrl);
   }
 
@@ -38,6 +38,10 @@ export class AulaService {
   updateAula(aula: Aula): Observable<Aula> {
     const url = `${this.baseUrl}/${aula.id}`;
     return this.http.put<Aula>(url, aula)
+  }
+
+  eliminar(id: string) {
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
 }

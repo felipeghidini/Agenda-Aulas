@@ -21,7 +21,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
-import { UpdateAulaComponent } from './views/home/update-aula/update-aula.component';
+import { UpdateAulaComponent } from './views/home/aula-list/update-aula/update-aula.component';
+import { ModalDeleteComponent } from './views/home/aula-list/modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UpdateAulaComponent } from './views/home/update-aula/update-aula.compon
     HomeComponent,
     AulaListComponent,
     AulaFormDialogComponent,
-    UpdateAulaComponent
+    UpdateAulaComponent,
+    ModalDeleteComponent,
   ],
   imports: [
     BrowserModule,
